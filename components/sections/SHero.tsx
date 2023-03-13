@@ -1,6 +1,7 @@
 // START: import-packages
 import { Container } from '../index';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 // START: section-hero
@@ -19,7 +20,10 @@ const Hero = () => {
             <LayerContent>
                 <ColOne
                 >
-                    <h1>Welcome To Our Cafe</h1>
+                    <motion.h1
+                        whileHover={{ scale: 1.2 }}
+                    >Welcome To Our Cafe
+                    </motion.h1>
                 </ColOne>
                 <ColTwo>col2</ColTwo>
             </LayerContent>
