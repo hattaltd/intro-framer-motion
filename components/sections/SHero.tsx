@@ -20,10 +20,7 @@ const Hero = () => {
             <LayerContent>
                 <ColOne
                 >
-                    <motion.h1
-                        whileHover={{ scale: 1.2 }}
-                    >Welcome To Our Cafe
-                    </motion.h1>
+                    <h1>Welcome To Our Cafe</h1>
                 </ColOne>
                 <ColTwo>col2</ColTwo>
             </LayerContent>
@@ -36,9 +33,10 @@ export default Hero;
 const SHero = styled.section`
     height: 100vh;
     background-color: #2b2727;
-    color: #d1f5a8;
     position: relative;
     z-index: 4;
+
+    color: #ffffff;
 `;
 
 const LayerImg = styled.div`
@@ -57,7 +55,7 @@ const LayerOverlay = styled.div`
     position: absolute;
     z-index: 3;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
 `;
 
 const LayerContent = styled.div`
@@ -81,8 +79,8 @@ const ColOne = styled.div`
     padding-bottom: 10rem;
 
     h1 {
-        font-size: 78px;
-        font-weight: 700;
+        font-size: 86px;
+        font-weight: 500;
     }
 `;
 
