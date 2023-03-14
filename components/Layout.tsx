@@ -11,7 +11,7 @@ type ChildrenProps = {
 const Layout = ({ children }:ChildrenProps) => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             {children}
             <Footer />
         </>
