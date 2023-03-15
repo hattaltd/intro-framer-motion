@@ -10,7 +10,7 @@ const Header = () => {
                 maxWidth="1760px"
             >
                 <Navbar>
-                    <h3>Logo Company</h3>
+                    <h3>Logo Co</h3>
                     <ul>
                         {   ["Home", "Product", "Location"].map((i, index) =>
                             <li
@@ -47,8 +47,17 @@ const Navbar = styled.nav`
     justify-content: space-between;
     align-items: center;
 
+    h3 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #d1f5a8;
+    }
+
     ul {
         display: flex;
         gap: 0 32px;
+
+        font-size: 20px;
+        font-weight: 500;
     }
 `;
