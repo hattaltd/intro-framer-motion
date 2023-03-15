@@ -4,6 +4,31 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
+const staggerContainer = {
+    initial: {},
+    animate: {
+        transition: {
+            staggerChildren: 0.45,
+            delayChildren: 0.55,
+        }
+    }
+}
+
+const fadeInDown = {
+    initial: {
+        y: -15,
+        opacity: 0
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: { 
+            type: 'tween', 
+            ease: 'linear',
+            duration: 0.65
+        },
+    }
+}
 
 // START: section-product
 const Product = () => {
@@ -12,43 +37,37 @@ const Product = () => {
         >
             <Container>
                 <Grid
-                    as={motion.section}
-                    initial={{}}
-                    whileInView="animate"
-                    viewport={{
-                        once: true, 
-                        amount: 0.9
-                    }}
-                    animate={{
+                    as={motion.div}
+                    // variants={staggerContainer} 
+                    initial="initial"
+                    whileInView={{
                         transition: {
-                            staggerChildren: 0.95,
-                            delayChildren: 0.45,
+                            staggerChildren: 0.45,
+                            delayChildren: 0.55,
                         }
                     }}
+                    viewport={{
+                        once:true, 
+                        amount: 0.6
+                    }}
                 >
-                    <ColOne>col1</ColOne>
-                    <ColTwo
+                    <ColOne
                         as={motion.div}
-                        initial={{
-                            y: -500,
-                            opacity: 0
-                        }}
-                        animate={{
-                            y: 0,
-                            opacity: 1,
-                            transition: { 
-                                type: 'tween', 
-                                ease: 'linear',
-                                duration: 0.65
-                            },
-                        }}
+                        variants={fadeInDown}
+                    >col1
+                    </ColOne>
+                    <ColTwo
+                        
                     >
-                        <Image
-                            alt="Cup image"
-                            src="/imgs/cup.png"
-                            width={226}
-                            height={285}
-                        />
+                        <motion.span
+                            variants={fadeInDown}
+                        >
+                            <Image
+                                alt="Cup image"
+                                src="/imgs/cup.png"
+                                fill
+                            />
+                        </motion.span>
                     </ColTwo>
                 </Grid>
             </Container>
@@ -84,8 +103,21 @@ const ColTwo = styled.div`
 
     background-color: #393532;
 
+    span {
+        position: relative;
+        width: 240px;
+        height: 280px;
+        overflow: hidden;
+        display: block;
+    }
+
     img {
-        margin-left: 7%;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        /* margin-left: 7%; */
         /* border: solid 1px gold; */
     }
+    
 `;
