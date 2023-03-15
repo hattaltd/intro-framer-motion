@@ -7,8 +7,9 @@ const Home = () => {
     return (
         <Main>
             <SHero />
-            <SProduct />
             <SLocation />
+            <SProduct />
+            
         </Main>
     )
 }
