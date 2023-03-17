@@ -16,8 +16,8 @@ const staggerContainer = {
 
 const fadeInDown = {
     initial: {
-        y: -15,
-        opacity: 0
+        y: -95,
+        opacity: 0,
     },
     animate: {
         y: 0,
@@ -38,22 +38,17 @@ const Product = () => {
             <Container>
                 <Grid
                     as={motion.div}
-                    // variants={staggerContainer} 
+                    variants={staggerContainer} 
                     initial="initial"
-                    whileInView={{
-                        transition: {
-                            staggerChildren: 0.45,
-                            delayChildren: 0.55,
-                        }
-                    }}
+                    whileInView="animate"
                     viewport={{
                         once:true, 
                         amount: 0.6
                     }}
                 >
                     <ColOne
-                        as={motion.div}
-                        variants={fadeInDown}
+                        // as={motion.div}
+                        // variants={fadeInDown}
                     >col1
                     </ColOne>
                     <ColTwo
