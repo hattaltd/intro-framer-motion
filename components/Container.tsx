@@ -40,7 +40,7 @@ const SContainer = styled.div<IContainer>`
 `
 // START: default-props
 Container.defaultProps  = {
-    maxWidth: '1760px',
+    maxWidth: '1860px',
     pT: '0',
     pB: '0',
     pL: '0',
