@@ -1,10 +1,10 @@
 // START: import-packages
 import { Container } from '../index';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import styled from 'styled-components';
 
-const staggerContainer = {
+const staggerContainer: Variants = {
     initial: {},
     animate: {
         transition: {
@@ -16,12 +16,13 @@ const staggerContainer = {
 
 const fadeInDown = {
     initial: {
-        y: -95,
-        opacity: 0,
+        // y: -95,
+        scale: 0.5,
+        // opacity: 0,
     },
     animate: {
-        y: 0,
-        opacity: 1,
+        scale: 0.85,
+        // opacity: 1,
         transition: { 
             type: 'tween', 
             ease: 'linear',
@@ -35,7 +36,9 @@ const Product = () => {
     return (
         <SProduct
         >
-            <Container>
+            <Container
+                maxWidth='1860px'
+            >
                 <Grid
                     as={motion.div}
                     variants={staggerContainer} 
@@ -55,7 +58,14 @@ const Product = () => {
                         
                     >
                         <motion.span
-                            variants={fadeInDown}
+                            animate={{
+                                y: ['0px', '30px', '0px']  
+                              }}
+                            transition={{ 
+                                ease: "linear", 
+                                duration: 3.5, 
+                                repeat: Infinity
+                            }}
                         >
                             <Image
                                 alt="Cup image"
