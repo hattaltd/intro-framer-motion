@@ -57,7 +57,7 @@ const Product = () => {
                     <ColTwo
                         
                     >
-                        <motion.span
+                        {/* <motion.span
                             animate={{
                                 y: ['0px', '30px', '0px']  
                               }}
@@ -72,7 +72,7 @@ const Product = () => {
                                 src="/imgs/cup.png"
                                 fill
                             />
-                        </motion.span>
+                        </motion.span> */}
                     </ColTwo>
                 </Grid>
             </Container>

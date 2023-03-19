@@ -6,7 +6,7 @@ export { default as Footer } from './Footer';
 // IMPORT: section-components
 export { default as  SHero } from './sections/SHero';
 export { default as  SProduct } from './sections/SProduct';
-export { default as  SLocation } from './sections/SLocation';
+export { default as  SBenefits } from './sections/SBenefits';
 
 //* IMPORT: reusable-components
 export { default as Container } from './Container';

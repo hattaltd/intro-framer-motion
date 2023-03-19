@@ -1,5 +1,5 @@
 // START: import-packages-components-etc
-import { SHero, SProduct, SLocation } from '@/components';
+import { SHero, SProduct, SBenefits } from '@/components';
 import styled from 'styled-components';
 
 // START: page
@@ -7,9 +7,8 @@ const Home = () => {
     return (
         <Main>
             <SHero />
-            <SLocation />
-            <SProduct />
-            
+            <SBenefits />
+            {/* <SProduct /> */}
         </Main>
     )
 }
