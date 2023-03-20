@@ -4,6 +4,26 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.85,
+            staggerChildren: 0.45
+        }
+    }
+};
+  
+const item = {
+    hidden: { y: -40, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1
+    }
+};
+
 // START: section-location
 const Benefits = () => {
     return (
@@ -35,10 +55,22 @@ const Benefits = () => {
                     </ColOne>
                     <ColTwo>
                         <h1>Benefits Of Drinking Coffee</h1>
-                        <CardList>
+                        <CardList
+                            as={motion.div}
+                            variants={container}
+                            initial="hidden"
+                            // animate="visible"
+                            whileInView="visible"
+                            viewport={{
+                                once:true, 
+                                amount: 0.6
+                            }}
+                        >
                             {   [1,2,3,4].map((i, index) =>
                                 <Card
                                     key={index}
+                                    as={motion.div}
+                                    variants={item}
                                 >
                                     <h3>0{i}</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
