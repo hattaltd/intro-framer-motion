@@ -34,6 +34,14 @@ const Benefits = () => {
                 <Grid>
                     <ColOne>
                         <ImgWrap
+                            as={motion.span}
+                            initial={{
+                                rotateZ: 1
+                            }}
+                            animate={{
+                                translateY: [0,-7,0]
+                            }}
+                            transition={{ repeat: Infinity, duration: 2.5 }}
                         >
                             <Image 
                                 alt="A large cup of coffee"
