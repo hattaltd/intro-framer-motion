@@ -26,19 +26,23 @@
 -->
 
 <!-- START Project Title -->
-## 📓 Project Title
-Intro to Framer Motion.
+## 📢 Intro Topic
+An intro to [Framer Motion](https://www.framer.com/motion/).
 <!-- END Project Title -->
 
 <!-- START Table Of Contents -->
 ## 📌 Table Of Contents
-Here is the table of contents of the Intro. 🛸
+Table of contents of this Intro.
 
-- [Project Title](#-project-title)
-- [Table Of Contents](#-table-of-contents)
-- [About Project](#-about-project)
-- [Technology Stack](#-technology-stack)
-- [References](#-references)
+1. [Intro Topic](#-intro-topic)
+2. [Table Of Contents](#-table-of-contents)
+3. [About Framer Motion](#-about-framer-motion)
+4. [Basic Features Of Framer Motion](#%EF%B8%8F-basic-features-of-framer-motion)
+   - motion
+   - whileInView
+   - variants with typescript
+   - staggerChildren
+5. [References](#-references)
 
 <a align="right" href="#-project-title">
   <img align="right" width="16" src="https://user-images.githubusercontent.com/92319348/202473243-8f547c67-ab8a-4fb1-821e-75e83ff6b097.png" />
@@ -46,14 +50,12 @@ Here is the table of contents of the Intro. 🛸
 <!-- END Table Of Contents -->
 
 <!-- START About Project -->
-## 📢 About Project
-In this project we will explore on the features of **Framer Motion**.
+## 🚀 About Framer Motion
+**`What`** **`Why`** **`When`** Framer Motion.
 
-What we have done in the recent times:
-* [x] Created a basic header with active and default link. If active will display underline.
-* [x] Created basic four sections layout.
-* [x] Created a basic button which will display when scrolling vertically and able to go to top page when click.
-* [x] Added basic scroll animation.
+- [x] A popular React animation toolkit designed to make simple animations.
+- [x] It can be used with React-based frameworks like Next.js, which supports server-side rendering.
+- [x] Support for TypeScript.
 
 <a align="right" href="#-project-title">
   <img align="right" width="16" src="https://user-images.githubusercontent.com/92319348/202473243-8f547c67-ab8a-4fb1-821e-75e83ff6b097.png" />
@@ -61,24 +63,9 @@ What we have done in the recent times:
 <!-- END About Project -->
 
 <!-- START Technology Stack -->
-## 🚀 Technology Stack
-A list of **technology stack** that we applied in this project. There are as listed below:
+## 🕹️ Basic Features Of Framer Motion
+Some of the basic features of Framer Motion.
 
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,javascript" />
-  </a>
-</p>
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,tailwind" />
-  </a>
-</p>
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode" />
-  </a>
-</p>
 
 <a align="right" href="#-project-title">
   <img align="right" width="16" src="https://user-images.githubusercontent.com/92319348/202473243-8f547c67-ab8a-4fb1-821e-75e83ff6b097.png" />
@@ -87,11 +74,10 @@ A list of **technology stack** that we applied in this project. There are as lis
 
 <!-- START References -->
 ## 🔎 References
-This is a list of references that we found quite helpful in the contribution to this project.
-1. [React-Scroll](https://www.npmjs.com/package/react-scroll) 
-2. [GitHub React-Scroll](https://github.com/fisshy/react-scroll) 
-3. [Stack Overflow](https://stackoverflow.com/questions/63397911/y-scroll-event-listener-useeffect) 
- 
+A list of references to Framer Motion.
+1. An official documentation of Framer Motion. [(Link)](https://www.framer.com/motion/) 
+2. An alternative documentation of Framer Motion. [(Link)](https://framerbook.com/) 
+
 <a align="right" href="#-project-title">
   <img align="right" width="16" src="https://user-images.githubusercontent.com/92319348/202473243-8f547c67-ab8a-4fb1-821e-75e83ff6b097.png" />
 </a>
