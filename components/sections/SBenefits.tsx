@@ -2,24 +2,29 @@
 import { Container } from '../index';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const container = {
+// import seed from '/imgs/seedling-line.svg';
+
+const container: Variants = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
         opacity: 1,
         scale: 1,
         transition: {
             delayChildren: 0.85,
-            staggerChildren: 0.45
+            staggerChildren: 0.25
         }
     }
 };
   
-const item = {
-    hidden: { y: -40, opacity: 0 },
+const item: Variants = {
+    hidden: { 
+        x: -40, 
+        opacity: 0 
+    },
     visible: {
-        y: 0,
+        x: 0,
         opacity: 1
     }
 };
@@ -36,10 +41,11 @@ const Benefits = () => {
                         <ImgWrap
                             as={motion.span}
                             initial={{
-                                rotateZ: 1
+                                rotateZ: 4
                             }}
                             animate={{
-                                translateY: [0,-7,0]
+                                translateY: [0,-15,0],
+                                // rotateZ: [0,-15,0,15,0]
                             }}
                             transition={{ repeat: Infinity, duration: 2.5 }}
                         >
@@ -80,7 +86,24 @@ const Benefits = () => {
                                     as={motion.div}
                                     variants={item}
                                 >
-                                    <h3>0{i}</h3>
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        viewBox="0 0 24 24" 
+                                        width="24" 
+                                        height="24"
+                                        // variants={svgVar}
+                                        // initial="hidden"
+                                        // animate="visible"
+                                    >
+                                        <path 
+                                            fill="none" 
+                                            d="M0 0H24V24H0z"
+                                        />
+                                        <path
+                                            d="M6 3c3.49 0 6.383 2.554 6.913 5.895C14.088 7.724 15.71 7 17.5 7H22v2.5c0 3.59-2.91 6.5-6.5 6.5H13v5h-2v-8H9c-3.866 0-7-3.134-7-7V3h4zm14 6h-2.5c-2.485 0-4.5 2.015-4.5 4.5v.5h2.5c2.485 0 4.5-2.015 4.5-4.5V9zM6 5H4v1c0 2.761 2.239 5 5 5h2v-1c0-2.761-2.239-5-5-5z"
+                                        />
+                                    </svg>
+                                    <h3>Good for your health</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </Card>
                             )}
@@ -109,7 +132,7 @@ const Grid = styled.div`
 `;
 
 const ColOne = styled.div`
-    padding: 9rem 0;
+    padding: 7rem 0;
     /* border: solid 1px black; */
     background-color: #D4B48B;
     border-radius: 20px;
@@ -157,6 +180,8 @@ const Content = styled.div`
 const ColTwo = styled.div`
     /* border: solid 1px black; */
 
+    color: #2D2424;
+
     h1 {
         font-size: 42px;
         font-weight: 600;
@@ -171,7 +196,14 @@ const CardList = styled.div`
 `;
 
 const Card = styled.div`
+    h3 {
+        font-weight: 500;
+        font-size: 22px;
+    }
+    
     p {
         margin-top: 10px;
+        font-weight: 400;
+        font-size: 16px;
     }
 `;

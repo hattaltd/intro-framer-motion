@@ -43,11 +43,11 @@ const GlobalStyle = createGlobalStyle`
   html::-webkit-scrollbar-thumb {
     /* background-color: #fafafa; */
     border-radius: 4px;
-    // transition: .5s ease linear;
+    background-color: #D5D5D5;
 
-    &:hover {
+    /* &:hover {
       background-color: #DADADA;
-    }
+    } */
   }
 
   html::-webkit-scrollbar-track {
