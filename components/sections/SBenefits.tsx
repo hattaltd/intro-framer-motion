@@ -1,35 +1,37 @@
 // START: import-packages
 import { Container } from '../index';
 import Image from 'next/image';
-import styled from 'styled-components';
 import { motion, Variants } from 'framer-motion';
+import styled from 'styled-components';
 
-// import seed from '/imgs/seedling-line.svg';
-
+// START: variants
 const container: Variants = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: {},
     visible: {
-        opacity: 1,
-        scale: 1,
         transition: {
             delayChildren: 0.85,
-            staggerChildren: 0.25
+            staggerChildren: 0.25,
         }
     }
 };
   
 const item: Variants = {
     hidden: { 
-        x: -40, 
+        y: -40, 
         opacity: 0 
     },
     visible: {
-        x: 0,
-        opacity: 1
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: "spring",
+            bounce: 0.65,
+            duration: 0.8
+        }
     }
 };
 
-// START: section-location
+// START: section-benefits
 const Benefits = () => {
     return (
         <SBenefits>
@@ -52,8 +54,8 @@ const Benefits = () => {
                             <Image 
                                 alt="A large cup of coffee"
                                 src="/imgs/img-lg-cup.png"
-                                width={224.13}
-                                height={400}
+                                width={168.1}
+                                height={300}
                                 quality={100}
                                 priority
                             />
@@ -68,7 +70,7 @@ const Benefits = () => {
                         </Content>
                     </ColOne>
                     <ColTwo>
-                        <h1>Benefits Of Drinking Coffee</h1>
+                        <h1><span>Benefits</span> Of Coffee </h1>
                         <CardList
                             as={motion.div}
                             variants={container}
@@ -76,7 +78,7 @@ const Benefits = () => {
                             // animate="visible"
                             whileInView="visible"
                             viewport={{
-                                once:true, 
+                                once: false, 
                                 amount: 0.6
                             }}
                         >
@@ -100,7 +102,7 @@ const Benefits = () => {
                                             d="M0 0H24V24H0z"
                                         />
                                         <path
-                                            d="M6 3c3.49 0 6.383 2.554 6.913 5.895C14.088 7.724 15.71 7 17.5 7H22v2.5c0 3.59-2.91 6.5-6.5 6.5H13v5h-2v-8H9c-3.866 0-7-3.134-7-7V3h4zm14 6h-2.5c-2.485 0-4.5 2.015-4.5 4.5v.5h2.5c2.485 0 4.5-2.015 4.5-4.5V9zM6 5H4v1c0 2.761 2.239 5 5 5h2v-1c0-2.761-2.239-5-5-5z"
+                                            fill="#B85C38" d="M6 3c3.49 0 6.383 2.554 6.913 5.895C14.088 7.724 15.71 7 17.5 7H22v2.5c0 3.59-2.91 6.5-6.5 6.5H13v5h-2v-8H9c-3.866 0-7-3.134-7-7V3h4zm14 6h-2.5c-2.485 0-4.5 2.015-4.5 4.5v.5h2.5c2.485 0 4.5-2.015 4.5-4.5V9zM6 5H4v1c0 2.761 2.239 5 5 5h2v-1c0-2.761-2.239-5-5-5z"
                                         />
                                     </svg>
                                     <h3>Good for your health</h3>
@@ -134,7 +136,7 @@ const Grid = styled.div`
 const ColOne = styled.div`
     padding: 7rem 0;
     /* border: solid 1px black; */
-    background-color: #D4B48B;
+    /* background-color: #D4B48B; */
     border-radius: 20px;
 
     display: flex;
@@ -146,8 +148,8 @@ const ColOne = styled.div`
 const ImgWrap = styled.span`
     /* border: solid 1px black; */
     position: relative;
-    width: 224.13px;
-    height: 400px;
+    width: 168.1px;
+    height: 300px;
     display: block;
 
     img {
@@ -166,7 +168,7 @@ const Content = styled.div`
     text-align: center;
 
     h1 {
-        font-size: 42px;
+        font-size: 38px;
         font-weight: 600;
         color: #B85C38;
     }
@@ -184,21 +186,30 @@ const ColTwo = styled.div`
 
     h1 {
         font-size: 42px;
+        font-weight: 500;
+    }
+
+    span {
+        color: #B85C38;
         font-weight: 600;
     }
 `;
 
 const CardList = styled.div`
-    margin-top: 40px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 50px 30px;
+    gap: 20px;
 `;
 
 const Card = styled.div`
+    padding: 20px;
+    background-color: #D4B48B;
+    border-radius: 10px;
+
     h3 {
         font-weight: 500;
-        font-size: 22px;
+        font-size: 18px;
     }
     
     p {
