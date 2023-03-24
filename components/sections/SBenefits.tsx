@@ -31,6 +31,19 @@ const item: Variants = {
     }
 };
 
+// const cup: Variants = {
+//     initial: {
+//         rotateZ: 4
+//     },
+//     visible: {
+//         translateY: [0,-15,0],
+//         transition: {
+//             repeat: Infinity, 
+//             duration: 2.5
+//         }
+//     }
+// }
+
 // START: section-benefits
 const Benefits = () => {
     return (
