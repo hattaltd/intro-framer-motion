@@ -32,16 +32,12 @@ An intro to [Framer Motion](https://www.framer.com/motion/).
 
 <!-- START Table Of Contents -->
 ## 📌 Table Of Contents
-Table of contents of this Intro.
+Table of contents.
 
 1. [Intro Topic](#-intro-topic)
 2. [Table Of Contents](#-table-of-contents)
 3. [About Framer Motion](#-about-framer-motion)
 4. [Basic Features Of Framer Motion](#%EF%B8%8F-basic-features-of-framer-motion)
-   - motion
-   - whileInView
-   - variants with typescript
-   - staggerChildren
 5. [References](#-references)
 
 <a align="right" href="#-project-title">
@@ -64,7 +60,11 @@ Table of contents of this Intro.
 
 <!-- START Technology Stack -->
 ## 🕹️ Basic Features Of Framer Motion
-Some of the basic features of Framer Motion.
+Some of the basic features of Framer Motion. Details can be seen in this repo.
+- motion
+- whileInView
+- variants with typescript
+- staggerChildren
 
 
 <a align="right" href="#-project-title">
