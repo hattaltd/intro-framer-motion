@@ -33,7 +33,7 @@ Table of contents.
 
 <!-- START Technology Stack -->
 ## 🕹️ Basic Features Of Framer Motion
-Some of the basic features of Framer Motion. Details can be seen in this repo.
+Some of the basic features of Framer Motion.
 - motion
 - transition
 - whileInView
