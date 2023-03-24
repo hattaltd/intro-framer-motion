@@ -22,7 +22,7 @@ const Hero = () => {
                 >
                     <h1>Welcome To Our Cafe</h1>
                 </ColOne>
-                <ColTwo>col2</ColTwo>
+                <ColTwo></ColTwo>
             </LayerContent>
         </SHero>
     )
